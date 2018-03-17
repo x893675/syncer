@@ -1,0 +1,12 @@
+{
+	"path":[
+		{
+			"src":"/Users/hanamichi/work/autoBak/src1",
+			"bak":"/Users/hanamichi/work/autoBak/dest1"
+		},
+		{
+			"src":"/Users/hanamichi/work/autoBak/src2",
+			"bak":"/Users/hanamichi/work/autoBak/dest2"
+		}
+	]
+}
