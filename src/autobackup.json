@@ -1,12 +1,12 @@
 {
 	"path":[
 		{
-			"src":"/Users/hanamichi/work/autoBak/src1",
-			"bak":"/Users/hanamichi/work/autoBak/dest1"
+			"src":"C:\\Users\\54038\\AppData\\Roaming\\DarkSoulsIII",
+			"bak":"D:\\work\\github\\gameBackup\\game\\DarkSouls3"
 		},
 		{
-			"src":"/Users/hanamichi/work/autoBak/src2",
-			"bak":"/Users/hanamichi/work/autoBak/dest2"
+			"src":"C:\\Program Files (x86)\\Steam\\userdata\\146089815\\460790",
+			"bak":"D:\\work\\github\\gameBackup\\game\\Bayonetta"
 		}
 	]
 }
