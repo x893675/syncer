@@ -4,25 +4,22 @@
 
 具体例子如下:
 
-```json
-{
-	"path":[
-		{
-			"src":"/Users/hanamichi/work/autoBak/src1",
-			"bak":"/Users/hanamichi/work/autoBak/dest1"
-		},
-		{
-			"src":"/Users/hanamichi/work/autoBak/src2",
-			"bak":"/Users/hanamichi/work/autoBak/dest2"
-		}
-	]
-}
+```ini
+[DarkSouls3]
+src=C:\Users\54038\AppData\Roaming\DarkSoulsIII
+bak=D:\work\github\gameBackup\game\DarkSouls3
+
+[Bayonetta]
+src=C:\Program Files (x86)\Steam\userdata\146089815\460790
+bak=D:\work\github\gameBackup\game\Bayonetta
 ```
+
+一个游戏一个配置段
 
 其中src为游戏存档目录
 
 bak为备份位置存档
 
-本工具用python编写，之后会加入可直接在windows上运行的二进制程序
+本工具用python编写
 
 **comming soon**….
