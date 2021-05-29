@@ -42,12 +42,12 @@ jobs:
       - name: cleanup artifacts for windows
         if: matrix.os == 'windows'
         run: |
-          npx rimraf "dist_electron/!(*.exe)"
+          npx rimraf "build/!(*.exe)"
 
       - name: cleanup artifacts for macos
         if: matrix.os == 'macos'
         run: |
-          npx rimraf "dist_electron/!(*.dmg)"
+          npx rimraf "build/!(*.dmg)"
 
       # step6: upload artifacts
       - name: upload artifacts

@@ -30,8 +30,8 @@ module.exports = {
       externals: ["nedb"],
       builderOptions: {
         // options placed here will be merged with default configuration and passed to electron-builder
-        productName: "Code Notes",
-        appId: "fr.lauthieb.code-notes",
+        productName: "Syncer",
+        appId: "x893675.github.com.syncer",
         directories: {
           output: "build"
         },
