@@ -32,11 +32,13 @@ jobs:
       - name: build windows app
         if: matrix.os == 'windows-latest'
         run: |
+          npm install
           npm run build:win
 
       - name: build mac app
         if: matrix.os == 'macos-latest'
         run: |
+          npm install
           npm run build:mac
       # step5: cleanup artifacts in build
       - name: cleanup artifacts for windows
