@@ -7,8 +7,8 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "cn-notes-list",
-      component: require("@/components/notes-list/NotesList").default
+      name: "home",
+      component: require("@/components/home/Home").default
     },
     {
       path: "*",

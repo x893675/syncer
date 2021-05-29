@@ -10,15 +10,15 @@ import App from "./App";
 
 import router from "./router";
 import store from "./store";
-// import db from "./datastore-notes";
+import db from "./datastore-notes";
 
-//const electron = require("electron");
-// electron.ipcRenderer.on("about", (arg, event) => {
-//   let component = router.currentRoute.matched[0].instances.default;
-//   if (event === "about-modal-active") {
-//     component.aboutModalActive = true;
-//   }
-// });
+const electron = require("electron");
+electron.ipcRenderer.on("about", (arg, event) => {
+  let component = router.currentRoute.matched[0].instances.default;
+  if (event === "about-modal-active") {
+    component.aboutModalActive = true;
+  }
+});
 
 Vue.use(Buefy, {
   defaultIconPack: "fa"
@@ -37,8 +37,7 @@ Vue.use(VModal);
 // if (!process.env.IS_WEB) Vue.use(require('vue-electron'));
 Vue.http = Vue.prototype.$http = axios;
 Vue.config.productionTip = false;
-
-// Vue.prototype.$db = db;
+Vue.prototype.$db = db;
 
 /* eslint-disable no-new */
 new Vue({
