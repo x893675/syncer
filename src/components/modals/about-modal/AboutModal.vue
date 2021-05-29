@@ -10,8 +10,7 @@
         <h4>v{{ appVersion }}</h4>
 
         <p>
-          A simple code snippet manager for developers built with Electron &
-          Vue.js 🚀
+          A simple game profile backup tools built with Electron & Vue.js 🚀
         </p>
 
         <p>
@@ -34,7 +33,7 @@ export default {
       appVersion: remote.app.getVersion()
     };
   },
-  methods:{
+  methods: {
     open: function(link) {
       window.open(link, "_blank");
     }

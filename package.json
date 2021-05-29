@@ -1,12 +1,12 @@
 {
-  "name": "code-notes",
-  "version": "1.2.4",
-  "author": "Laurent THIEBAULT <thiebault.laurent@gmail.com>",
-  "description": "A simple code snippet manager for developers built with Electron 🚀",
+  "name": "syncer",
+  "version": "0.0.1",
+  "author": "Hanamichi <x893675@icloud.com>",
+  "description": "A simple game profile backup tools built with Electron 🚀",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lauthieb/code-notes.git"
+    "url": "https://github.com/x893675/syncer.git"
   },
   "main": "background.js",
   "scripts": {
@@ -69,9 +69,5 @@
     "spectron": "^10.0.1",
     "vue-cli-plugin-electron-builder": "2.0.0-beta.6",
     "vue-template-compiler": "^2.6.11"
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/code-notes"
   }
 }
