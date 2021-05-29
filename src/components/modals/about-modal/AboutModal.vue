@@ -3,7 +3,7 @@
     <div class="modal-card-body">
       <div class="media">
         <div class="media-content">
-          <img src="~@/assets/img/code-notes-logo-black-full.png" alt="Image" />
+          <img src="~@/assets/img/syncer-logo-black-full.png" alt="Image" />
         </div>
       </div>
       <div class="text-center">
@@ -16,7 +16,7 @@
 
         <p>
           Feel free to contribute on
-          <a @click="open('https://github.com/lauthieb/code-notes')">Github</a>
+          <a @click="open('https://github.com/x893675/syncer')">Github</a>
           🍻
         </p>
       </div>

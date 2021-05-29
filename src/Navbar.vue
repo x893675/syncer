@@ -2,14 +2,14 @@
   <nav>
     <img
       class="logo"
-      src="~@/assets/img/code-notes-logo-white-full.png"
-      alt="Code Notes logo"
+      src="~@/assets/img/syncer-logo-white-full.png"
+      alt="Syncer logo"
     />
 
     <div class="is-pulled-right">
       <a
         id="github"
-        @click="open('https://github.com/lauthieb/code-notes')"
+        @click="open('https://github.com/x893675/syncer')"
         title="Github"
       >
         <b-icon icon="github"></b-icon>
