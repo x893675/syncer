@@ -11,17 +11,15 @@ jobs:
   release:
     # job's name
     name: build and release electron app
-
-    # the type of machine to run the job on
-    runs-on: ${{ matrix.os }}
-
     # create a build matrix for jobs
     strategy:
       matrix:
-        os: [windows, macos]
+        os: [windows-latest, macos-latest]
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
     # create steps
+    # the type of machine to run the job on
+    runs-on: ${{ matrix.os }}
     steps:
       # step1: check out repository
       - name: Check out git repository
