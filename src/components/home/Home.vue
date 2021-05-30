@@ -1,16 +1,10 @@
 <template>
-  <div>
-    <section>
-      <b-checkbox v-model="isGreen">Green color</b-checkbox>
-      <div class="block">
-        <b-icon :type="{ 'is-success': isGreen }" icon="account"></b-icon>
-        <b-icon :type="{ 'is-success': isGreen }" icon="home"></b-icon>
-        <b-icon
-          :type="{ 'is-success': isGreen }"
-          icon="view-dashboard"
-        ></b-icon>
-      </div>
-    </section>
+  <div id="games-list">
+    <div class="no-games">
+      <h2>
+        😮.. 啥也没有 添加一个吧
+      </h2>
+    </div>
     <b-modal :active.sync="aboutModalActive" has-modal-card>
       <cn-about-modal></cn-about-modal>
     </b-modal>
