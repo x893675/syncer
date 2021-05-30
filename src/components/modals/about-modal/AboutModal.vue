@@ -3,7 +3,7 @@
     <div class="modal-card-body">
       <div class="media">
         <div class="media-content">
-          <img src="~@/assets/img/syncer-logo-black-full.png" alt="Image" />
+          <img src="~@/assets/img/syncer-logo-white-fullx2.png" alt="Image" />
         </div>
       </div>
       <div class="text-center">

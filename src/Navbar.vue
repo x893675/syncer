@@ -2,7 +2,7 @@
   <nav>
     <img
       class="logo"
-      src="~@/assets/img/syncer-logo-white-full.png"
+      src="~@/assets/img/syncer-logo-white-fullx2.png"
       alt="Syncer logo"
     />
 
@@ -60,13 +60,14 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 60px;
   z-index: 1000;
 
   .logo {
-    padding: 10px 10px 4px 10px;
-    width: 110px;
+    //padding: 10px 10px 4px 10px;
+    width: 160px;
     position: relative;
-    left: 4%;
+    //left: 4%;
   }
 
   #about-code-notes,
