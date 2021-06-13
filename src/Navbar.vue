@@ -62,6 +62,10 @@ nav {
   width: 100%;
   height: 60px;
   z-index: 1000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   .logo {
     //padding: 10px 10px 4px 10px;

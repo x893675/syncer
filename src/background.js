@@ -50,7 +50,7 @@ function createWindow() {
       label: "Application",
       submenu: [
         {
-          label: "About Code-Notes",
+          label: "About Syncer",
           click: () => {
             win.webContents.send("about", "about-modal-active");
           }

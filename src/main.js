@@ -10,7 +10,7 @@ import App from "./App";
 
 import router from "./router";
 import store from "./store";
-import db from "./datastore-notes";
+import db from "./datastore-games";
 
 const electron = require("electron");
 electron.ipcRenderer.on("about", (arg, event) => {
