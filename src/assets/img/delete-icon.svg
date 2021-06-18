@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #151c42;
+        opacity: 0.2;
+      }
+
+      .cls-2 {
+        fill: #ff1010;
+        opacity: 0;
+      }
+    </style>
+  </defs>
+  <g id="组_12" data-name="组 12" transform="translate(-326 -134)">
+    <path id="delete" class="cls-1" d="M68.333,1.333l1-1.333h3.334l1,1.333H78V2.667H64V1.333ZM65.667,4H76.333V16H65.667ZM67,5.333v9.334h8V5.333Zm3.333,1.334v6.666H69V6.667Zm2.667,0v6.666H71.667V6.667Z" transform="translate(263 134)"/>
+    <rect id="矩形_21" data-name="矩形 21" class="cls-2" width="16" height="16" transform="translate(326 134)"/>
+  </g>
+</svg>

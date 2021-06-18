@@ -7,14 +7,28 @@
       </svg>
     </div>
     <template v-if="gamesFiltered.length > 0 && !isLoading">
-      <div
-        class="columns notes"
-        v-for="(game, index) in gamesFiltered"
-        :key="index"
-      >
-        <!--        <div class="column is-12 game-card">-->
-        <!--          <cn-game-card :game="game"></cn-game-card>-->
-        <!--        </div>-->
+      <div class="games" v-for="(game, index) in gamesFiltered" :key="index">
+        <div class="game-card">
+          <img class="game-pic" src="~@/assets/img/dk3-logo.png" alt="Image" />
+          <p class="game-name">{{ game.name }}</p>
+          <img
+            class="delete-icon"
+            src="~@/assets/img/delete-icon.svg"
+            alt="Image"
+          />
+          <img
+            class="setting-icon"
+            src="~@/assets/img/delete-icon.svg"
+            alt="Image"
+          />
+          <p class="game-lastbackupts">{{ game.lastBackupTime }}</p>
+          <div class="restore-button">
+            <p class="restore-button-text">还原</p>
+          </div>
+          <div class="delete-button">
+            <p class="delete-button-text">删除</p>
+          </div>
+        </div>
       </div>
     </template>
 
@@ -54,7 +68,30 @@ export default {
   computed: {
     ...mapGetters(["games", "isLoading"]),
     gamesFiltered() {
-      return [];
+      /*
+        const game = {};
+        game.id =
+        game.name=
+        game.createdAt
+        game.updateAt
+        game.profile
+        game.lastBackupTime
+        game.srcPath
+        game.backupHistory
+        backupHistory is array about backup record: record.id=,record.startTime,record.endTime,record.srcPath,record.destName
+ */
+      const mock = {
+        id: 1,
+        name: "Dark Souls3",
+        createdAt: "2021-06-19 12:00:00",
+        updateAt: "2021-06-19 12:00:00",
+        profile: "xxx.jpg",
+        lastBackupTime: "2021-06-19 12:00:00",
+        srcPath: "/home/xxx",
+        backupHistory: []
+      };
+
+      return [mock,mock];
     }
   },
   beforeRouteEnter(route, redirect, next) {

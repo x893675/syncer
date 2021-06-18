@@ -26,3 +26,52 @@
     font-weight: 300;
   }
 }
+
+.game-card {
+  width: 348px;
+  height: 133px;
+  background: #EDF5F5;
+  opacity: 1;
+}
+
+.restore-button {
+  width: 56px;
+  height: 28px;
+  border: 1px solid #151C42;
+  opacity: 1;
+  border-radius: 2px;
+}
+
+.restore-button-text {
+  margin-top: 4px;
+  margin-left: 14px;
+  width: 28px;
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 20px;
+  color: #151C42;
+  opacity: 1;
+}
+
+.delete-button {
+  width: 56px;
+  height: 28px;
+  background: #1C1C1C;
+  opacity: 1;
+  border-radius: 2px;
+}
+
+.delete-button-text {
+  margin-top: 4px;
+  margin-left: 14px;
+  width: 28px;
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 20px;
+  color: #FFFFFF;
+  opacity: 1;
+}
