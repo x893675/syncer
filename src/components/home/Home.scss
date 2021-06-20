@@ -27,11 +27,25 @@
   }
 }
 
+.games {
+  display: flex;
+  justify-content: space-around;
+}
+
 .game-card {
   width: 348px;
   height: 133px;
   background: #EDF5F5;
   opacity: 1;
+}
+
+.game-card-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-card-footer {
+  display: flex;
 }
 
 .restore-button {

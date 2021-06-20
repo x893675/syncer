@@ -7,26 +7,38 @@
       </svg>
     </div>
     <template v-if="gamesFiltered.length > 0 && !isLoading">
-      <div class="games" v-for="(game, index) in gamesFiltered" :key="index">
-        <div class="game-card">
-          <img class="game-pic" src="~@/assets/img/dk3-logo.png" alt="Image" />
-          <p class="game-name">{{ game.name }}</p>
-          <img
-            class="delete-icon"
-            src="~@/assets/img/delete-icon.svg"
-            alt="Image"
-          />
-          <img
-            class="setting-icon"
-            src="~@/assets/img/delete-icon.svg"
-            alt="Image"
-          />
-          <p class="game-lastbackupts">{{ game.lastBackupTime }}</p>
-          <div class="restore-button">
-            <p class="restore-button-text">还原</p>
-          </div>
-          <div class="delete-button">
-            <p class="delete-button-text">删除</p>
+      <div class="games">
+        <div v-for="(game, index) in gamesFiltered" :key="index">
+          <div class="game-card">
+            <div class="game-card-content">
+              <div class="game-pic">
+                <img :src="game.profile" alt="Image" />
+              </div>
+              <div class="game-text">
+                <p class="game-name">{{ game.name }}</p>
+                <p class="game-lastbackupts">{{ game.lastBackupTime }}</p>
+              </div>
+              <div>
+                <img
+                  class="delete-icon"
+                  src="~@/assets/img/delete-icon.svg"
+                  alt="Image"
+                />
+                <img
+                  class="setting-icon"
+                  src="~@/assets/img/delete-icon.svg"
+                  alt="Image"
+                />
+              </div>
+            </div>
+            <div class="game-card-footer">
+              <div class="restore-button">
+                <p class="restore-button-text">还原</p>
+              </div>
+              <div class="delete-button">
+                <p class="delete-button-text">删除</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -85,13 +97,13 @@ export default {
         name: "Dark Souls3",
         createdAt: "2021-06-19 12:00:00",
         updateAt: "2021-06-19 12:00:00",
-        profile: "xxx.jpg",
+        profile: require("@/assets/img/" + "dk3-logo.png"),
         lastBackupTime: "2021-06-19 12:00:00",
         srcPath: "/home/xxx",
         backupHistory: []
       };
 
-      return [mock,mock];
+      return [mock, mock, mock];
     }
   },
   beforeRouteEnter(route, redirect, next) {
