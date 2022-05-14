@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     open: function(link) {
-    window.open(link, "_blank");
+      window.open(link, "_blank");
     }
   }
 };

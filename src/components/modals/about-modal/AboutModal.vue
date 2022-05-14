@@ -30,7 +30,7 @@ export default {
   name: "cn-about-modal",
   data() {
     return {
-      appVersion: remote.app.getVersion()
+      appVersion: process.env.VUE_APP_GIT_HASH
     };
   },
   methods: {

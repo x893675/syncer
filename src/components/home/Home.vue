@@ -92,18 +92,18 @@ export default {
         game.backupHistory
         backupHistory is array about backup record: record.id=,record.startTime,record.endTime,record.srcPath,record.destName
  */
-      const mock = {
-        id: 1,
-        name: "Dark Souls3",
-        createdAt: "2021-06-19 12:00:00",
-        updateAt: "2021-06-19 12:00:00",
-        profile: require("@/assets/img/" + "dk3-logo.png"),
-        lastBackupTime: "2021-06-19 12:00:00",
-        srcPath: "/home/xxx",
-        backupHistory: []
-      };
+      // const mock = {
+      //   id: 1,
+      //   name: "Dark Souls3",
+      //   createdAt: "2021-06-19 12:00:00",
+      //   updateAt: "2021-06-19 12:00:00",
+      //   profile: require("@/assets/img/" + "dk3-logo.png"),
+      //   lastBackupTime: "2021-06-19 12:00:00",
+      //   srcPath: "/home/xxx",
+      //   backupHistory: []
+      // };
 
-      return [mock, mock, mock];
+      return [];
     }
   },
   beforeRouteEnter(route, redirect, next) {

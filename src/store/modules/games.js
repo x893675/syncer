@@ -16,7 +16,7 @@ const mutations = {
     state.games.push(game);
   },
   DELETE_GAME(state, game) {
-    state.games = state.games.filter(n => n.id !== game.id);
+    state.games = state.games.filter(n => n._id !== game._id);
   },
   SELECT_LOADING(state, loading) {
     state.isLoading = loading;
@@ -29,34 +29,8 @@ const actions = {
     db.find({}, (err, games) => {
       if (!err) {
         store.commit("LOAD_GAMES", games);
-        actions.checkGamesStatus(games);
         store.commit("SELECT_LOADING", false);
       }
-    });
-  },
-  checkGamesStatus(games) {
-    games.forEach(game => {
-      const fs = require("fs-extra");
-      const gamesDir = path.join(remote.app.getPath("userData"), "games");
-      const curGameDir = path.join(
-        gamesDir,
-        `${game.name}-${game.createdAt.getTime()}`
-      );
-      if (!fs.existsSync(curGameDir)) {
-        fs.ensureDirSync(curGameDir);
-      }
-      // TODO: check game backup record
-
-      // Write metadata to filesystem
-      fs.writeFileSync(
-        path.join(curGameDir, "metadata.json"),
-        JSON.stringify({
-          description: game.description,
-          updatedAt: game.updatedAt,
-          createdAt: game.createdAt
-        }),
-        "utf-8"
-      );
     });
   },
   addGames(store, game) {
@@ -67,37 +41,49 @@ const actions = {
         store.commit("SELECT_LOADING", false);
       }
     });
-    //TODO: create game dir
+    actions.mkdir(game);
   },
   updateGame(store, game) {
-    db.update({ id: game.id }, game, {}, err => {
+    db.update({ _id: game._id }, game, {}, err => {
       if (!err) {
         store.dispatch("loadGames");
       }
     });
-    // ensure game dir exist, sync it
-    //actions.
   },
   deleteGame(store, game) {
     store.commit("SELECT_LOADING", true);
-    db.remove({ id: game.id }, {}, err => {
+    db.remove({ _id: game._id }, {}, err => {
       if (!err) {
         store.commit("DELETE_GAME", game);
         store.commit("SELECT_LOADING", false);
       }
     });
-    // delete game dir
+    actions.rmdir(game);
+  },
+  // check if game dir exist, if not, create it
+  mkdir(game) {
+    const fs = require("fs-extra");
+    const gamesDir = path.join(
+      remote.app.getPath("userData"),
+      "backups",
+      game._id
+    );
+    if (!fs.existsSync(gamesDir)) {
+      fs.ensureDirSync(gamesDir);
+    }
+  },
+  // remove game dir
+  rmdir(game) {
+    const fs = require("fs-extra");
+    const gamesDir = path.join(
+      remote.app.getPath("userData"),
+      "backups",
+      game._id
+    );
+    if (fs.existsSync(gamesDir)) {
+      fs.removeSync(gamesDir);
+    }
   }
-
-  // deleNoteFromFS(note) {
-  //   const fs = require("fs-extra");
-  //   const curNoteDir = path.join(
-  //     remote.app.getPath("userData"),
-  //     "notes",
-  //     `${note.name}-${note.createdAt.getTime()}`
-  //   );
-  //   fs.removeSync(curNoteDir);
-  // },
 };
 
 const getters = {
