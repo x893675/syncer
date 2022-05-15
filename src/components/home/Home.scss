@@ -4,6 +4,7 @@
 
 .no-games {
   text-align: center;
+
   h2 {
     height: 23px;
     margin-top: 283px;
@@ -18,7 +19,8 @@
 .loading-bro {
   margin: 50px auto;
   width: 150px;
-  > h1 {
+
+  >h1 {
     text-align: center;
     font-size: 1.5em;
     margin-top: 150px;
@@ -29,63 +31,61 @@
 
 .games {
   display: flex;
-  justify-content: space-around;
+  //box-sizing: border-box;
+  //justify-content: space-around;
 }
 
 .game-card {
-  width: 348px;
-  height: 133px;
-  background: #EDF5F5;
-  opacity: 1;
+  width: 260px;
+  height: 176px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  margin-left: 20px;
 }
 
-.game-card-content {
-  display: flex;
-  justify-content: space-around;
+.game-pic {
+  width: 260px;
+  height: 100px;
 }
 
-.game-card-footer {
-  display: flex;
+.game-img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.restore-button {
-  width: 56px;
-  height: 28px;
-  border: 1px solid #151C42;
-  opacity: 1;
-  border-radius: 2px;
-}
-
-.restore-button-text {
-  margin-top: 4px;
-  margin-left: 14px;
-  width: 28px;
-  height: 20px;
+.game-name {
+  margin-left: 10px;
+  margin-top: 12px;
+  width: 137px;
+  height: 24px;
   font-size: 14px;
-  font-family: PingFang SC;
-  font-weight: 400;
-  line-height: 20px;
-  color: #151C42;
-  opacity: 1;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #000000;
+  line-height: 24px;
 }
 
-.delete-button {
-  width: 56px;
-  height: 28px;
-  background: #1C1C1C;
-  opacity: 1;
-  border-radius: 2px;
-}
-
-.delete-button-text {
-  margin-top: 4px;
-  margin-left: 14px;
-  width: 28px;
-  height: 20px;
+.game-lastbackup {
+  width: 73px;
+  height: 24px;
   font-size: 14px;
-  font-family: PingFang SC;
-  font-weight: 400;
-  line-height: 20px;
-  color: #FFFFFF;
-  opacity: 1;
+  font-family: Avenir-Book, Avenir;
+  font-weight: normal;
+  color: #000000;
+  line-height: 24px;
+}
+
+.game-content {
+  margin-left: 4px;
+  margin-top: 4px;
+  font-size: 14px;
+font-family: Avenir-Book, Avenir;
+font-weight: normal;
+color: #000000;
+line-height: 24px;
 }

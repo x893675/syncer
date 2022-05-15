@@ -21,6 +21,12 @@ export default {
 <style lang="scss">
 body {
   font-family: "Source Sans Pro", sans-serif;
+  height: 100%;
+  background: #f3f3f3;
+}
+
+html {
+  height: 100%;
 }
 
 #content {

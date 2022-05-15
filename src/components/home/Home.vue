@@ -10,34 +10,21 @@
       <div class="games">
         <div v-for="(game, index) in gamesFiltered" :key="index">
           <div class="game-card">
-            <div class="game-card-content">
-              <div class="game-pic">
-                <img :src="game.profile" alt="Image" />
-              </div>
-              <div class="game-text">
-                <p class="game-name">{{ game.name }}</p>
-                <p class="game-lastbackupts">{{ game.lastBackupTime }}</p>
-              </div>
-              <div>
-                <img
-                  class="delete-icon"
-                  src="~@/assets/img/delete-icon.svg"
-                  alt="Image"
-                />
-                <img
-                  class="setting-icon"
-                  src="~@/assets/img/delete-icon.svg"
-                  alt="Image"
-                />
-              </div>
+            <div class="game-pic">
+              <img class="game-img" :src="game.profile" alt="Image" />
             </div>
-            <div class="game-card-footer">
-              <div class="restore-button">
-                <p class="restore-button-text">还原</p>
-              </div>
-              <div class="delete-button">
-                <p class="delete-button-text">删除</p>
-              </div>
+            <div class="game-name">
+              <span>{{ game.name }}</span>
+            </div>
+            <div class="game-content">
+              <span class="icon-text">
+                <span class="icon">
+                  <i class="fa fa-history"></i>
+                </span>
+                <span>{{
+                  game.updatedAt.toLocaleString([], { hour12: false })
+                }}</span>
+              </span>
             </div>
           </div>
         </div>
@@ -45,17 +32,13 @@
     </template>
 
     <div v-if="gamesFiltered.length === 0 && !isLoading" class="no-games">
-      <h2>
-        😮.. 啥也没有 添加一个吧
-      </h2>
+      <h2>😮.. 啥也没有 添加一个吧</h2>
     </div>
     <b-modal :active.sync="aboutModalActive" has-modal-card>
       <cn-about-modal></cn-about-modal>
     </b-modal>
   </div>
 </template>
-
-import AboutModal from "../modals/about-modal/AboutModal";
 
 <script>
 import { mapGetters, mapActions } from "vuex";
@@ -73,37 +56,16 @@ export default {
   },
   methods: {
     ...mapActions(["loadGames"])
-    // showCreateNoteModal() {
-    //   this.$modal.show(createNoteModalName);
-    // }
   },
   computed: {
     ...mapGetters(["games", "isLoading"]),
     gamesFiltered() {
-      /*
-        const game = {};
-        game.id =
-        game.name=
-        game.createdAt
-        game.updateAt
-        game.profile
-        game.lastBackupTime
-        game.srcPath
-        game.backupHistory
-        backupHistory is array about backup record: record.id=,record.startTime,record.endTime,record.srcPath,record.destName
- */
-      // const mock = {
-      //   id: 1,
-      //   name: "Dark Souls3",
-      //   createdAt: "2021-06-19 12:00:00",
-      //   updateAt: "2021-06-19 12:00:00",
-      //   profile: require("@/assets/img/" + "dk3-logo.png"),
-      //   lastBackupTime: "2021-06-19 12:00:00",
-      //   srcPath: "/home/xxx",
-      //   backupHistory: []
-      // };
-
-      return [];
+      const gamesFilter = this.games.filter(game => {
+        return (game.profile = require("@/assets/img/" +
+          "default-profile.jpg"));
+      });
+      console.log(gamesFilter.length);
+      return gamesFilter;
     }
   },
   beforeRouteEnter(route, redirect, next) {
